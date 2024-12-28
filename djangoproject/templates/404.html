@@ -3,21 +3,28 @@
 
 {% block title %}{% translate "Page not found" %}{% endblock %}
 
-{% block header %}<h1>404</h1>{% endblock %}
+{% block header %}
+<h1 style="font-family: 'Roboto', Corbel, Avenir, 'Lucida Grande', 'Lucida Sans', sans-serif; font-weight: 400;">404</h1>  
+{% search %}
+{% endblock %}
 
 {% block content %}
-  <h2>{% translate "Page not found" %}</h2>
+  <h2 style="font-family: 'Roboto', Corbel, Avenir, 'Lucida Grande', 'Lucida Sans', sans-serif; font-weight: 400;">
+    {% translate "Page not found" %}
+  </h2>
 
-  <p>
+  <p style="font-family: 'Roboto', Corbel, Avenir, 'Lucida Grande', 'Lucida Sans', sans-serif; font-weight: 400;">
     {% blocktranslate trimmed %}
       Looks like you followed a bad link. If you think it's our fault, please
-      <a href="https://code.djangoproject.com/">let us know</a>.
-    {% endblocktranslate %}</p>
+      <a href="https://code.djangoproject.com/" style="color: #007bff; text-decoration: none;">let us know</a>.
+    {% endblocktranslate %}
+  </p>
 
   {% url 'homepage' as homepage_url %}
-  <p>
+  <p style="font-family: 'Roboto', Corbel, Avenir, 'Lucida Grande', 'Lucida Sans', sans-serif; font-weight: 400;">
     {% blocktranslate trimmed %}
-      Here's a link to the <a href="{{ homepage_url }}">homepage</a>. You know, just in case.
-    {% endblocktranslate %}</p>
-
+      Here's a link to the <a href="{{ homepage_url }}" style="color: #007bff; text-decoration: none;">homepage</a>. You know, just in case.
+    {% endblocktranslate %}
+  </p>
 {% endblock %}
+
